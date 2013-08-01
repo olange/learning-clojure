@@ -5,6 +5,7 @@ Learning trail, reading notes and exercices in my quest to learn the Clojure pro
 
 * [Learning Trail](https://github.com/olange/learning-clojure/wiki/Learning-Trail)
 * [Articles, tutorials, resources](https://github.com/olange/learning-clojure/wiki/Articles-and-resources)
+* [Clojure Toolchain](https://github.com/olange/learning-clojure/wiki/Clojure-Toolchain)
 * [4Clojure selected exercices](https://github.com/olange/learning-clojure/tree/master/4clojure)
 
 (All notes are [in the wiki](https://github.com/olange/learning-clojure/wiki))
