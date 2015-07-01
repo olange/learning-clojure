@@ -16,10 +16,10 @@
 (defn fibo-suite
   "Retourne une séquence infinie de termes de la suite de Fibonnacci"
   []
-  (defn fibnext [s]
-    (cons (+' (first s) (second s)) s))
-  (map first
-    (iterate fibnext [0 1])))
+  (defn fibnext [[a b]]
+    [b (+' a b)])
+    (map first
+      (iterate fibnext [0 1])))
 
 (defn -main
   "I don't do a whole lot ... yet."
