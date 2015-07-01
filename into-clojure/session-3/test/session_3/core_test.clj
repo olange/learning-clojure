@@ -2,6 +2,12 @@
   (:require [clojure.test :refer :all]
             [session-3.core :refer :all]))
 
-(deftest a-test
-  (testing "FIXME, I fail."
-    (is (= 0 1))))
+(deftest fibo-test
+  (testing "the first numbers of the Fibonnacci suite"
+    (is (= 0 (fibo 0)))
+    (is (= 1 (fibo 1)))
+    (is (= 1 (fibo 2)))
+    (is (= 2 (fibo 3)))
+    (is (= 3 (fibo 4)))
+    (is (= 5 (fibo 5)))
+    (is (= 8 (fibo 6)))))
