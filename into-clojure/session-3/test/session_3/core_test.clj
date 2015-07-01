@@ -11,3 +11,8 @@
     (is (= 3 (fibo 4)))
     (is (= 5 (fibo 5)))
     (is (= 8 (fibo 6)))))
+
+(deftest fibo-suite-test
+  (testing "the first 11 numbers of the Fibonnacci suite"
+    (is (= (list 0 1 1 2 3 5 8 13 21 34 55)
+           (take 11 (fibo-suite))))))
