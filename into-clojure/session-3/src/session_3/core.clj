@@ -1,6 +1,8 @@
 (ns session-3.core
   (:gen-class))
 
+(declare fibo)
+
 (defn fibo-
   "Retourne le n-ième terme de la suite de Fibonnacci"
   [n]
@@ -16,9 +18,16 @@
   []
   (defn fibnext [s]
     (cons (+' (first s) (second s)) s))
-  (iterate fibnext [0 1]))
+  (map first
+    (iterate fibnext [0 1])))
 
 (defn -main
   "I don't do a whole lot ... yet."
   [& args]
-  (println "Hello, World!"))
+  (do
+    (dorun
+      (map println
+        (for [i (range 11)]
+          (format "(fibo %d): %d" i (fibo i)))))
+    (println "(take 11 (fibo-suite)):\n"
+              (take 11 (fibo-suite)))))
