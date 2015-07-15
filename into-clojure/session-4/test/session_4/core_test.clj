@@ -1,6 +1,10 @@
 (ns session-4.core-test
   (:require [clojure.test :refer :all]
+            [schema.core :as s]
+            [schema.test :as st]
             [session-4.core :refer :all]))
+
+(use-fixtures :once schema.test/validate-schemas)
 
 (deftest set-winner-is-a
   (testing "Gagnant du jeu est A"
