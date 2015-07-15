@@ -3,9 +3,19 @@
   (:require [schema.core :as s])
   (:gen-class))
 
+(def MinScore
+  "A schema that validates that a number is >= 6"
+  (s/pred #(>= % 6) 'GreaterOrEqualTo6?))
+  ; 1. Un des deux doit être supérieur ou égal à 6
+  ; 2. La différence est >= 2 pour le cas où le vainqueur a 6 jeux
+  ; 3. La différence est exactement de 2 si le vainqueur a > 6 jeux
+  ; 4. à l'exception du tie-break, où le score est de 7-6 ou 6-7.
+
 (def SetScore
   "A schema for the score of a set"
-  [ s/Int ])
+  (s/both
+    [ MinScore ]
+    [ (s/one s/Int 'integer?) (s/one s/Int 'integer?) ]))
 
 (def GameScore
   "A schema for the score of a set"
