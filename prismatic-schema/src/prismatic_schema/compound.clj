@@ -3,7 +3,7 @@
 
 (s/defrecord Segment [
   rel :- {:type s/Str
-          :data {s/Keyword s/Str}}
+          :data {(s/maybe s/Keyword) (s/maybe s/Str)}}
   partner :- { :noCli s/Str :noDos s/Str }])
 
 (s/defrecord ParsedGraph [
@@ -15,15 +15,7 @@
     :rel { :type "BVM-KOLL" :data {}}
     :partner {:noCli "H1234" :noDos "00"}})))
 
-(s/defrecord StampedNames
-  [date :- Long
-   names :- [s/Str]])
-
-(s/defn stamped-names :- StampedNames
-  [names :- [s/Str]]
-  ;; This would fail, because the String is not a Long:
-  ;; (StampedNames. (str (System/currentTimeMillis)) names))
-  ;;
-  ;; ==> RuntimeException: Output of stamped-names does not match schema:
-  ;;     {:date (not (instance? java.lang.Long "1378267311501"))}
-  (StampedNames. (System/currentTimeMillis) names))
+(s/defn ->parsed-graph :- ParsedGraph
+  [some-entity :- s/Any]
+  (ParsedGraph. false [(Segment. {:type "withRelation" :data {}}
+                {:noCli "H12345" :noDos "00"})]))
