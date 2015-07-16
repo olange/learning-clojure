@@ -2,9 +2,19 @@
   (:require [clojure.test :refer :all]
             [schema.core :as s]
             [schema.test :as st]
-            [session-4.core :refer :all]))
+            [session-4.core :refer :all])
+  (:import  (clojure.lang ExceptionInfo)))
 
 (use-fixtures :once schema.test/validate-schemas)
+
+(deftest set-winner-score-check
+  (testing "Validation des scores d'un jeu: "
+    (testing "leur somme doit être 6 au minimum"
+      (is (thrown-with-msg? ExceptionInfo #"does not match schema: .*SumGreaterOrEqualTo6\?"
+          (set-winner [1 3]))))
+    (testing "chacun devrait être un nombre entier"
+      (is (thrown-with-msg? ExceptionInfo #"does not match schema: .*integer\?"
+          (set-winner [:not-a-number 7]))))))
 
 (deftest set-winner-is-a
   (testing "Gagnant du jeu est A"
