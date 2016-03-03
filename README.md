@@ -1,12 +1,10 @@
 # Learning Clojure
 
-[Learning Trail](https://github.com/olange/learning-clojure/wiki/Learning-Trail) / [Articles, tutorials, resources](https://github.com/olange/learning-clojure/wiki/Articles-and-resources) / [Clojure Toolchain](https://github.com/olange/learning-clojure/wiki/Clojure-Toolchain) / [A few Clojure design considerations](https://github.com/olange/learning-clojure/wiki/Some-Clojure-Design-Considerations)
-
-(All notes are [in the wiki](https://github.com/olange/learning-clojure/wiki))
-
-## Learning Datomic
-
-[Datomic Learning Trail](https://github.com/olange/learning-clojure/Datomic-Learning-Trail)
+* [Clojure Learning Trail](https://github.com/olange/learning-clojure/wiki/Learning-Trail)
+* [Datomic Learning Trail](https://github.com/olange/learning-clojure/Datomic-Learning-Trail)
+* [Articles, tutorials and resources](https://github.com/olange/learning-clojure/wiki/Articles-and-resources)
+* [Clojure Toolchain](https://github.com/olange/learning-clojure/wiki/Clojure-Toolchain)
+* More notes [in the wiki](https://github.com/olange/learning-clojure/wiki)
 
 ## Training
 
