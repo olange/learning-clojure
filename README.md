@@ -1,7 +1,7 @@
 # Learning Clojure
 
 * [Clojure Learning Trail](https://github.com/olange/learning-clojure/wiki/Learning-Trail)
-* [Datomic Learning Trail](https://github.com/olange/learning-clojure/Datomic-Learning-Trail)
+* [Datomic Learning Trail](https://github.com/olange/learning-clojure/wiki/Datomic-Learning-Trail)
 * [Articles, tutorials and resources](https://github.com/olange/learning-clojure/wiki/Articles-and-resources)
 * [Clojure Toolchain](https://github.com/olange/learning-clojure/wiki/Clojure-Toolchain)
 * More notes [in the wiki](https://github.com/olange/learning-clojure/wiki)
